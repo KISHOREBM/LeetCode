@@ -31,15 +31,14 @@ class Solution {
         // }
         // return true;
         int record[] = new int[26];
-        for(int i=0;i<s.length();i++)
+        for(char c: s.toCharArray())
         {
-            record[s.charAt(i)-'a']++;
-            record[t.charAt(i)-'a']--;
+            record[c-'a']++;
         }
-        // for(char c: t.toCharArray())
-        // {
-        //     record[c-'a']--;
-        // }
+        for(char c: t.toCharArray())
+        {
+            record[c-'a']--;
+        }
         for(int i: record)
         {
             if(i!=0)
