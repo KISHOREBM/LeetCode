@@ -2,7 +2,7 @@ class Solution {
     public boolean isAnagram(String s, String t) {
         if(s.length()!=t.length())
         return false;
-        Map<Character,Integer> strs = new HashMap();
+        // Map<Character,Integer> strs = new HashMap();
         // Map<Character,Integer> strt = new HashMap();
         // for(int i=0; i<s.length(); i++)
         // {
@@ -19,14 +19,29 @@ class Solution {
         // return true;
         // else
         // return false;
-        for(int i=0;i<s.length();i++)
+        // for(int i=0;i<s.length();i++)
+        // {
+        //     strs.put(s.charAt(i),strs.getOrDefault(s.charAt(i),0)+1);
+        //     strs.put(t.charAt(i),strs.getOrDefault(t.charAt(i),0)-1);
+        // }
+        // for(int c : strs.values())
+        // {
+        //     if(c !=0)
+        //     return false;
+        // }
+        // return true;
+        int record[] = new int[26];
+        for(char c: s.toCharArray())
         {
-            strs.put(s.charAt(i),strs.getOrDefault(s.charAt(i),0)+1);
-            strs.put(t.charAt(i),strs.getOrDefault(t.charAt(i),0)-1);
+            record[c-'a']++;
         }
-        for(int c : strs.values())
+        for(char c: t.toCharArray())
         {
-            if(c !=0)
+            record[c-'a']--;
+        }
+        for(int i: record)
+        {
+            if(i!=0)
             return false;
         }
         return true;
