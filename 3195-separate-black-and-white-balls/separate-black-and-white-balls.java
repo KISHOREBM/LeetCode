@@ -7,10 +7,10 @@ class Solution {
         {
             if(c=='0')
             count+=white;
-            else if(c=='1')
+            else 
             white+=1;
-            else
-            white=0;
+            // else
+            // white=0;
         }
         return count;
     }
