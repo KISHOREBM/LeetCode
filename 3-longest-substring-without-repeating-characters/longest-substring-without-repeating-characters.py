@@ -4,6 +4,8 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+        if len(s)<2:
+            return len(s)
         ret=0
         for i in range(len(s)):
             le=[]
