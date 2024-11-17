@@ -11,7 +11,6 @@ class Solution(object):
                 if j in le:
                     break
                 le.append(j)
-            if len(le)>ret:
-                ret=len(le)
+            ret=max(ret,len(le))
         return ret
         
