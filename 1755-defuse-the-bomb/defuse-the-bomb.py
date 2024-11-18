@@ -20,8 +20,7 @@ class Solution(object):
     def decrypt(self, code, k):
         i=0
         if k<0:
-            n=k*-1
-            return Solution.minus(code,n)
+            return Solution.minus(code,k*-1)
         elif k==0:
             return [0]*len(code)
         else:
