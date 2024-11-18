@@ -18,7 +18,6 @@ class Solution(object):
             i+=1
         return ret
     def decrypt(self, code, k):
-        ret=[0]*len(code)
         i=0
         if k<0:
             n=k*-1
