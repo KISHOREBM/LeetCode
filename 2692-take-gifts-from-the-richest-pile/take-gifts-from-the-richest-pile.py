@@ -7,8 +7,8 @@ class Solution(object):
         :rtype: int
         """
         for i in range(k):
-            large=math.sqrt(max(gifts))
-            gifts[gifts.index(max(gifts))]=int(large)
+            large=max(gifts)
+            gifts[gifts.index(large)]=int(math.sqrt(large))
         return sum(gifts)
 
         
