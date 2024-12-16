@@ -13,6 +13,6 @@ class Solution(object):
                 if nums[j] < small:
                     small=nums[j]
                     mini=j
-            nums[mini]=nums[mini]*multiplier
+            nums[mini]=small*multiplier
         return nums
         
