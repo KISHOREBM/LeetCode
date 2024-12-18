@@ -11,6 +11,6 @@ class Solution(object):
             for j in range(1,len(nums)):
                 if nums[j] < nums[mini]:
                     mini=j
-            nums[mini]=nums[mini]*multiplier
+            nums[mini]*=multiplier
         return nums
         
