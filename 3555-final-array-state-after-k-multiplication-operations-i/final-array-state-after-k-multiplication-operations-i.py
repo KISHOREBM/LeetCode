@@ -7,12 +7,10 @@ class Solution(object):
         :rtype: List[int]
         """
         for i in range(k):
-            small=nums[0]
             mini=0
             for j in range(1,len(nums)):
-                if nums[j] < small:
-                    small=nums[j]
+                if nums[j] < nums[mini]:
                     mini=j
-            nums[mini]=small*multiplier
+            nums[mini]=nums[mini]*multiplier
         return nums
         
