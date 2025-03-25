@@ -10,11 +10,11 @@ class Solution(object):
             'M':1000
         }
         count=0
-        for a,b in zip(s,s[1:]):
-            if dist[a] < dist[b]:
-                count-=dist[a]
+        for i in range(len(s)-1):
+            if dist[s[i]]>=dist[s[i+1]]:
+                count+=dist[s[i]]
             else:
-                count+=dist[a]
+                count-=dist[s[i]]
         return count+dist[s[-1]]
 
         
