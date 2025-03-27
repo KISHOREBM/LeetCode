@@ -4,7 +4,7 @@ class Solution(object):
         value,count=Counter(nums).most_common(1)[0]
         prec=0
         n=len(nums)
-        for i in range(n):
+        for i in range(n-1):
             if nums[i]==value:
                 prec+=1
                 count-=1
