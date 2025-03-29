@@ -3,9 +3,9 @@ class Solution(object):
         mi=nums[0]
         for i in nums[1:]:
             if abs(i)<=abs(mi):
-                mi=min(abs(i),abs(mi))
-        if abs(mi) in nums:
-            return abs(mi)
-        else:
-            return abs(mi)*-1
+                if abs(i)==abs(mi):
+                    mi=max(i,mi)
+                else:
+                    mi=i
+        return mi
         
