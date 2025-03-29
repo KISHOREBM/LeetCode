@@ -11,8 +11,5 @@ class Solution(object):
             elif i=='+':
                 val.append(val[-1]+val[-2])
         # print(val)
-        s=0
-        for i in val:
-            s+=i
-        return s
+        return sum(val)
         
