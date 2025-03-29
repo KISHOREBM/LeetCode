@@ -10,6 +10,6 @@ class Solution(object):
                 val.append(val[-1]*2)
             elif i=='+':
                 val.append(val[-1]+val[-2])
-        print(val)
+        # print(val)
         return sum(val)
         
