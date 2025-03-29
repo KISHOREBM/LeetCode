@@ -1,7 +1,7 @@
 class Solution(object):
     def calPoints(self, operations):
-        val=[int(operations[0])]
-        for i in operations[1:]:
+        val=[]
+        for i in operations:
             if i.lstrip('-').isdigit():
                 val.append(int(i))
             elif i=='C':
