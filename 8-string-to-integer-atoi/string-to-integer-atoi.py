@@ -1,29 +1,30 @@
+# def stdec(va):
+#     if va=="" or not va[0].isdecimal():
+#         return 0
+#     return int(va[0])+10*stdec(va[1:])
 class Solution(object):
     def myAtoi(self, s):
-        flag=1
-        visited=0
-        fvisited=0
-        ret=""
-        for i in s:
-            if i==' ' and visited+fvisited ==0:
-                continue
-            if i.isnumeric():
-                visited=1
-                ret=ret+i
-            elif (i=='-' or i=='+') and visited+fvisited ==0:
-                flag=int(i+'1')
-                fvisited=1
-            else:
-                break
-        if visited ==0:
+        mi=1
+        start=0
+        s=s.lstrip()
+        if not s:
             return 0
-        ret=int(ret)*flag
-        if ret <= -2147483648:
+        
+        if s[start]=='-':
+            mi=-1
+            start+=1
+        elif start<len(s) and s[start]=='+':
+            start+=1
+        val=0
+        while start<len(s) and s[start].isdecimal():
+            val=val*10+int(s[start])
+            start+=1
+        val=val*mi
+        if val < -2147483648:
             return -2147483648
-        elif ret >=2147483647:
+        if val > 2147483647:
             return 2147483647
-        else:
-            return ret
+        return val
         
         
         
