@@ -6,6 +6,8 @@ class Solution(object):
         :type h: int
         :rtype: int
         """
+        if len(piles)==h:
+            return max(piles)
         ret=max(piles)
         low=1
         right=max(piles)
@@ -17,9 +19,6 @@ class Solution(object):
                     count+=1
                 else:
                     count+=np.ceil(i/float(mid))
-                    # print(np.ceil(i/mid),i,mid)
-            # print(count,mid)
-            # print(ret,mid,count)
             if ret>mid and count<=h:
                 ret=mid
             if count>h:
