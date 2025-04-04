@@ -1,14 +1,9 @@
 # import numpy as np
 class Solution(object):
     def minEatingSpeed(self, piles, h):
-        """
-        :type piles: List[int]
-        :type h: int
-        :rtype: int
-        """
         ret=max(piles)
         low=1
-        right=max(piles)
+        right=ret
         while low<=right:
             count=0
             mid=(low+right)//2
