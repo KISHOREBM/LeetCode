@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 class Solution(object):
     def minEatingSpeed(self, piles, h):
         """
@@ -16,7 +16,7 @@ class Solution(object):
                 if i<=mid:
                     count+=1
                 else:
-                    count+=np.ceil(i/float(mid))
+                    count+=(i+mid-1)//mid
             if ret>mid and count<=h:
                 ret=mid
             if count>h:
