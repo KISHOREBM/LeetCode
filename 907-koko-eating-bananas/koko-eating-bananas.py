@@ -6,8 +6,6 @@ class Solution(object):
         :type h: int
         :rtype: int
         """
-        if len(piles)==h:
-            return max(piles)
         ret=max(piles)
         low=1
         right=max(piles)
