@@ -6,7 +6,6 @@ class Solution(object):
         """
         rightsum=[0]
         s=sum(nums[1:])
-        # print(s)
         count=0
         for i in nums[1:]:
             rightsum.insert(count,s)
@@ -17,7 +16,6 @@ class Solution(object):
         for i in nums[:-1]:
             s=s+i
             leftsum.append(s)
-        # print(leftsum,rightsum)
         return [abs(leftsum[i]-rightsum[i]) for i in range(len(leftsum)) ]
 
         
