@@ -12,14 +12,12 @@ class Solution(object):
                     x=(amount//values[j])
                     if coins[values[j]]-x>=0:
                         coins[values[j]]-=x
-                        # print(coins,amount//values[j])
                         amount=amount%values[j]
                     j+=1
-                # print(amount,'a')
                 if amount>0:
                     return False
             coins[i]+=1
-            print(coins,'co')
+            # print(coins,'co')
         return True
             
 
