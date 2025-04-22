@@ -15,11 +15,6 @@ class Solution(object):
         cur=head
         for i in range(count-n-1):
             cur=cur.next
-        # if count==2:
-        #     if n==1:
-        #         head.next=None
-        #         return head
-        #     return head.next
         if cur==head:
             if count==n:
                 return head.next
