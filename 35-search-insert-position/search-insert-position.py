@@ -6,7 +6,6 @@ class Solution(object):
             return 0
         while low<=high:
             mid=(low+high)//2
-            print(mid)
             if nums[mid-1]<target and nums[mid]>=target:
                 return mid
             elif nums[mid]>target:
