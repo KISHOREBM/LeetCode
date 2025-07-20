@@ -7,17 +7,16 @@
 def travese(root,dis,count):
     if not root:
         return
-    count+=1
     if count not in dis:
         dis[count]=[]
     dis[count].append(root.val)
-    travese(root.left,dis,count)
-    travese(root.right,dis,count)
+    travese(root.left,dis,count+1)
+    travese(root.right,dis,count+1)
     return dis.values()
     
 class Solution(object):
     def levelOrder(self, root):
         if root==None:
             return []
-        return travese(root,{},-1)
+        return travese(root,{},0)
         
