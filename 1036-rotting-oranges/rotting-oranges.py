@@ -15,7 +15,8 @@ class Solution(object):
 
         if fresh == 0:
             return 0
-
+        if not q:
+            return -1
         count = 0
         direction = [(-1, 0), (1, 0), (0, 1), (0, -1)]
 
